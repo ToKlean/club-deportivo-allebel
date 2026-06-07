@@ -1,0 +1,101 @@
+.nosotros {
+  padding: 100px 40px;
+  background: var(--color-bg);
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.textCol {
+  flex: 1;
+  opacity: 0;
+  transform: translateX(-60px);
+}
+
+.imageCol {
+  flex: 1;
+  opacity: 0;
+  transform: translateX(60px);
+}
+
+.imagePlaceholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(135deg, #2a0a3d, #1a0033);
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 30px;
+  color: var(--color-accent);
+  letter-spacing: 1px;
+}
+
+.text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  margin-bottom: 40px;
+}
+
+.counters {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.counterNumber {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  color: var(--color-accent);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.counterLabel {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-top: 10px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .nosotros {
+    flex-direction: column;
+    gap: 40px;
+    padding: 60px 30px;
+  }
+
+  .counters {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .nosotros {
+    padding: 40px 20px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .text {
+    font-size: 0.95rem;
+  }
+}
